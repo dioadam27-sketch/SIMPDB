@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Penjadwalan Kuliah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scrollbar for dashboard feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+
+      /* Print Optimization Styles */
+      @media print {
+        @page {
+          size: landscape;
+          margin: 10mm;
+        }
+        aside, 
+        button, 
+        input, 
+        .no-print,
+        .flex-wrap.gap-2 {
+          display: none !important;
+        }
+        body {
+          background: white !important;
+          overflow: visible !important;
+          height: auto !important;
+        }
+        main {
+          margin: 0 !important;
+          padding: 0 !important;
+          width: 100% !important;
+          overflow: visible !important;
+        }
+        .max-h-\[600px\] {
+          max-height: none !important;
+          overflow: visible !important;
+        }
+        .shadow-sm, .shadow-lg, .shadow-\[2px_0_5px_rgba\(0\,0\,0\,0\.1\)\] {
+          shadow: none !important;
+          box-shadow: none !important;
+        }
+        table {
+          width: 100% !important;
+          border: 1px solid #e2e8f0 !important;
+        }
+        th, td {
+          border: 1px solid #e2e8f0 !important;
+        }
+        .bg-slate-900 {
+          background-color: #0f172a !important;
+          color: white !important;
+          -webkit-print-color-adjust: exact;
+        }
+        .bg-slate-800 {
+          background-color: #1e293b !important;
+          color: white !important;
+          -webkit-print-color-adjust: exact;
+        }
+        .bg-blue-600 {
+          background-color: #2563eb !important;
+          color: white !important;
+          -webkit-print-color-adjust: exact;
+        }
+        .bg-blue-50\/50 {
+          background-color: #eff6ff !important;
+          -webkit-print-color-adjust: exact;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "xlsx": "https://esm.sh/xlsx@0.18.5"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50 text-slate-900 antialiased overflow-hidden h-screen">
+    <div id="root" class="h-full"></div>
+  </body>
+</html>
